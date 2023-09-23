@@ -1,0 +1,16 @@
+{
+  "targets": [],
+  "passes": [
+    {
+      "name": "skillsbuster:distortion",
+      "intarget": "shimmer:input",
+      "outtarget": "shimmer:output",
+      "auxtargets": [
+        {
+          "id": "minecraft:main",
+          "name": "WarpImage"
+        }
+      ]
+    }
+  ]
+}

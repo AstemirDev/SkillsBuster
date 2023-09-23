@@ -1,0 +1,7 @@
+{
+  "fog-color": [1,1,1,1],
+  "fog-shape": "sphere",
+  "fog-near": 10,
+  "fog-far": 20,
+  "fog-enabled": false
+}

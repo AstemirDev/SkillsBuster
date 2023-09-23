@@ -1,0 +1,16 @@
+{
+  "configurations": {
+    "client": [
+      {"type": "camera", "path": "client/camera.json", "enabled": true, "preload": true},
+      {"type": "keybinds", "path": "client/keybinds.json", "enabled": true, "preload": true},
+      {"type": "guis", "path": "client/guis.json", "enabled": true, "preload": true},
+      {"type": "models", "path": "client/models.json", "enabled": true, "preload": true},
+      {"type": "environmental", "path": "client/environmental.json", "enabled": true, "preload": true},
+      {"type": "shader", "path": "client/shaders.json", "enabled": true, "preload": true}
+    ],
+    "common": [
+      {"type": "actors", "path": "common/actors.json", "enabled": true, "preload": true}
+    ],
+    "server": []
+  }
+}

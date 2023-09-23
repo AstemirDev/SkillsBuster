@@ -1,0 +1,15 @@
+{
+  "targets": [
+    {"name": "blur0", "blit": true, "scaleSize": {"width": 0.9,"height": 0.9}},
+    {"name": "blur1", "blit": true, "scaleSize": {"width": 0.75,"height": 0.75}},
+    {"name": "blur2", "blit": true, "scaleSize": {"width": 0.6,"height": 0.6}},
+    {"name": "blur3", "blit": true, "scaleSize": {"width": 0.45,"height": 0.45}}
+  ],
+  "passes": [
+    {"name": "shimmer:seperable_blur","intarget": "shimmer:input","outtarget": "blur0","uniforms": [{"name": "BlurDir","values": [ 1.0, 0.0 ]},{"name": "Radius","values": [10]}]},
+    {"name": "shimmer:seperable_blur","intarget": "blur0","outtarget": "blur1","uniforms": [{"name": "BlurDir","values": [ 0.0, 1.0 ]},{"name": "Radius","values": [10]}]},
+    {"name": "shimmer:seperable_blur","intarget": "blur1","outtarget": "blur2","uniforms": [{"name": "BlurDir","values": [ 1.0, 0.0 ]},{"name": "Radius","values": [20]}]},
+    {"name": "shimmer:seperable_blur","intarget": "blur2","outtarget": "blur3","uniforms": [{"name": "BlurDir","values": [ 0.0, 1.0 ]},{"name": "Radius","values": [20]}]},
+    {"name": "skillsbuster:combine_removal","intarget": "blur3","outtarget": "shimmer:output","auxtargets": [{"id": "shimmer:input","name": "RemoveSampler"},{ "id": "minecraft:main","name": "CombineSampler"}]}
+  ]
+}

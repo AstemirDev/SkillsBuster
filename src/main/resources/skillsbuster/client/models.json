@@ -1,0 +1,9 @@
+{
+  "models": {
+    "default": {
+      "model": "skillsbuster:actors/skills/skills.geo.json",
+      "animation": "skillsbuster:actors/skills/skills.animation.json",
+      "texture": "skillsbuster:actors/skills/skills.png"
+    }
+  }
+}

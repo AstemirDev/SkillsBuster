@@ -1,0 +1,7 @@
+{
+  "absolute_pos": false,
+  "frames": [
+    {"time": 0.0, "position": [0,0,0], "rotation": [0,0,0], "interpolation": "linear", "easing": "none"},
+    {"time": 1.0, "position": [4,0,0], "rotation": [90,0,0], "interpolation": "linear", "easing": "none"}
+  ]
+}

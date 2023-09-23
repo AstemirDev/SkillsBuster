@@ -1,0 +1,10 @@
+{
+  "shaders": {
+    "distortion": {
+      "path": "skillsbuster:shaders/post/distortion.json"
+    },
+    "blur": {
+      "path": "skillsbuster:shaders/post/blur.json"
+    }
+  }
+}

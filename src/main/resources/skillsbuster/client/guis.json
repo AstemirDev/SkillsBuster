@@ -1,0 +1,25 @@
+{
+  "guis": {
+    "test": {
+      "children": [
+        {
+          "type": "window",
+          "transform": {
+            "position": [0,0],
+            "size": [256,256]
+          },
+          "children": [
+            {
+              "type": "button",
+              "text": "test",
+              "transform": {
+                "position": [0,0],
+                "size": [32,32]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

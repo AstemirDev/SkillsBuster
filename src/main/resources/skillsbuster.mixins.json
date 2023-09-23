@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.astemir.skillsbuster.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "skillsbuster.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "client.MixinExtendPostPass",
+    "client.MixinMouseHandler"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

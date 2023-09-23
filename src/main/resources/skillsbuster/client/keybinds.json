@@ -1,0 +1,27 @@
+{
+  "keybindings": {
+    "zoom_press": {"key": "key.keyboard.z", "click-type": "on_press", "scripts": ["zoom start 20 0.1 10 smooth elastic_in_out"]},
+    "zoom_release": {"key": "key.keyboard.z", "click-type": "on_release", "scripts": ["zoom stop"]},
+
+    "ruler_show": {"key": "key.keyboard.left.alt", "click-type": "on_press", "scripts": ["ruler show"]},
+    "ruler_hide": {"key": "key.keyboard.left.alt", "click-type": "on_release", "scripts": ["ruler hide"]},
+
+    "reload": {
+      "key": "key.keyboard.r",
+      "click-type": "on_click",
+      "scripts": [
+        "reload_all",
+        "msg 'Ресурсы успешно перезагружены!'",
+        "sound 'minecraft:entity.experience_orb.pickup' 1 1"
+      ]
+    },
+
+    "test": {
+      "key": "key.keyboard.g",
+      "click-type": "on_click",
+      "scripts": [
+        "gui show 'test'"
+      ]
+    }
+  }
+}

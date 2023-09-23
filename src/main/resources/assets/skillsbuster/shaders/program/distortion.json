@@ -1,0 +1,39 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "shimmer:blit",
+  "fragment": "skillsbuster:distortion",
+  "attributes": [
+    "Position"
+  ],
+  "uniforms": [
+    {
+      "name": "OutSize",
+      "type": "float",
+      "count": 2,
+      "values": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "iTime",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    }
+  ],
+  "samplers": [
+    {
+      "name": "WarpImage"
+    },
+    {
+      "name": "DiffuseSampler"
+    }
+  ]
+}
