@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import org.astemir.api.client.ResourceArray;
 import ru.astemir.skillsbuster.common.io.json.SBJson;
 import ru.astemir.skillsbuster.common.io.json.SBJsonDeserializer;
 import ru.astemir.skillsbuster.manager.actor.EntityActor;
@@ -22,9 +23,8 @@ public sealed interface ModelTexture<T> {
             JsonArray array = jsonObject.getAsJsonArray("paths");
             ResourceLocation[] locations = new ResourceLocation[array.size()];
             for (int i = 0; i < locations.length; i++) {
-                locations[i] = SyncedResourceManager.registered(array.getAsString());
+                locations[i] = SyncedResourceManager.registered(array.get(i).getAsString());
             }
-            System.out.println(Arrays.asList(locations));
             return new Animated(locations, SBJson.getDouble(jsonObject,"speed",1.0));
         }
         return null;
@@ -65,14 +65,12 @@ public sealed interface ModelTexture<T> {
         @Override
         public ResourceLocation getTexture(T instance) {
             int ticks = getTicks(instance);
-            if (ticks % (1.0/speed) == 0){
-                if (index < locations.length-1){
-                    index++;
-                }else{
-                    index = 0;
-                }
+            double factor = 1/speed;
+            int index = (int) ((ticks/factor%locations.length*factor)/factor);
+            if (index == locations.length){
+                index = 0;
             }
-            return locations[0];
+            return locations[index];
         }
     }
 }

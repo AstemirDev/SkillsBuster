@@ -25,14 +25,6 @@ public class SyncedResourceManager extends SBManager.Default<ResourceLocation> {
 
     @Override
     public void onLoad(Level level) {
-//        TextureManager manager = Minecraft.getInstance().getTextureManager();
-//        ResourceManager resourceManager = Minecraft.getInstance().getResourceManager();
-//        for (ResourceLocation resource : entries()) {
-//            AbstractTexture texture = manager.getTexture(resource);
-//            if (texture != null) {
-//                texture.reset(manager, resourceManager, resource, null);
-//            }
-//        }
         TextureManager manager = Minecraft.getInstance().getTextureManager();
         ResourceManager resourceManager = Minecraft.getInstance().getResourceManager();
         ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
